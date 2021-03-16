@@ -5,8 +5,6 @@ This is my TUTORIAL project for flutter.
 
 # Run (Gitpod)
 
-exec following commands:
-
 ```sh
 $ cd app
 $ flutter run -d web-server
