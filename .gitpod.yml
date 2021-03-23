@@ -1,6 +1,7 @@
 image:
   file: .gitpod.Dockerfile
-
+tasks:
+  - command: (cd app/ ; flutter pub get)
 vscode:
   extensions:
     - dart-code.dart-code@3.20.1:gKwMOzlkrgxrb7aPrMdQ8w==
