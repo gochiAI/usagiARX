@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: flutter upgrade
-    command: (cd app/ ; flutter pub get)
+    command: (cd app/ ; flutter pub get ; flutter config --enable-web)
 vscode:
   extensions:
     - dart-code.dart-code
