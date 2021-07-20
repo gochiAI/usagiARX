@@ -10,7 +10,7 @@ void main() {
   // アプリケーションは、基本的に以下の構造で作る
   //
   // MaterialApp
-  //   └> Scaffhold
+  //   └> Scaffold
   //        └> 自分のウィジェット
   //
   // - MaterialApp で、タイトルやテーマなどのアプリケーション全体の設定を行う
