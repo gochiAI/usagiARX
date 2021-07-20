@@ -1,5 +1,5 @@
-name: app
-description: A new Flutter project.
+name: canvaskit_embed_ja_font
+description: レンダラに CanvasKit を用いている場合で中華フォントになってしまう件をフォントの埋め込みで対応するサンプル
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
