@@ -1,7 +1,6 @@
-default:
+default: run
 
-run-flutter:
-	(cd app/ ; flutter run -d web-server)
-
-run-dart:
-	@echo 'NOW UNDER CONSTRUCTION...'
+.ONESHELL:
+run:
+	@read -p "ENTER EXAMPLE NAME: " appname;
+	(cd "$$appname" ; flutter run -d web-server)
