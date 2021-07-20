@@ -13,6 +13,12 @@ void main() {
   //   └> Scaffhold
   //        └> 自分のウィジェット
   //
+  // - MaterialApp で、タイトルやテーマなどのアプリケーション全体の設定を行う
+  // - Scaffhold で、画面の足場の設定を行う
+  // - その中に自分の画面、つまり、ウィジェットを作り込む
+  //
+  // というイメージ。
+  //
   // なので、最小構成の HelloWorld は以下のようになる。
   runApp(MaterialApp(
     title: 'Flutter HelloWorld',
