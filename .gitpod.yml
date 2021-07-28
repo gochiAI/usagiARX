@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: flutter upgrade
-    command: flutter config --enable-web ; make pubget
+    command: flutter config --no-enable-android --no-enable-ios --enable-web ; make pubget
 vscode:
   extensions:
     - dart-code.dart-code
