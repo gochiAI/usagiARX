@@ -32,14 +32,14 @@ class ClockScreen extends StatefulWidget {
 class _ClockScreenState extends State<ClockScreen> {
   DateTime dt;
 
-  late DateFormat _format;
+  late DateFormat _formatter;
   late Timer _timer;
 
   _ClockScreenState(this.dt);
 
   @override
   void initState() {
-    _format = DateFormat("HH:mm:ss");
+    _formatter = DateFormat("HH:mm:ss");
 
     // 1秒毎に着火するタイマーで setState を呼び出して UI を更新
     _timer = Timer.periodic(Duration(seconds: 1), (t) {
@@ -69,7 +69,7 @@ class _ClockScreenState extends State<ClockScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            _format.format(dt),
+            _formatter.format(dt),
             style: Theme.of(context).textTheme.headline2,
           ),
         ],
