@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home_screen.dart';
+import 'screens/clock_screen.dart';
 
 class App extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Basic-03 StatefulWidget',
       theme: ThemeData.dark(),
-      home: HomeScreen(),
+      home: ClockScreen(),
     );
   }
 }

@@ -7,14 +7,14 @@ import 'package:intl/intl.dart';
 ///
 /// [StatefulWidget]を継承した場合[createState]メソッドをオーバーライドする
 /// 必要がある.このメソッドからは自身に対応する[State]オブジェクトを生成して返す.
-class HomeScreen extends StatefulWidget {
+class ClockScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _HomeScreenState(DateTime.now());
+    return _ClockScreenState(DateTime.now());
   }
 }
 
-/// [HomeScreen]に対応する[State]オブジェクト
+/// [ClockScreen]に対応する[State]オブジェクト
 ///
 /// このクラスで状態管理を行いながらUIを処理する.
 ///
@@ -29,13 +29,13 @@ class HomeScreen extends StatefulWidget {
 /// [setState]の引数にコールバックを渡すことができるので
 /// この中でUI変更に関わる値を変更する.
 ///
-class _HomeScreenState extends State<HomeScreen> {
+class _ClockScreenState extends State<ClockScreen> {
   DateTime dt;
 
   late DateFormat _format;
   late Timer _timer;
 
-  _HomeScreenState(this.dt);
+  _ClockScreenState(this.dt);
 
   @override
   void initState() {
