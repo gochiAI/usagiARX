@@ -65,10 +65,11 @@ class _ClockScreenState extends State<ClockScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Text(
-        _formatter.format(dt),
-        style: Theme.of(context).textTheme.headline2,
-      )),
+        child: Text(
+          _formatter.format(dt),
+          style: Theme.of(context).textTheme.headline2,
+        ),
+      ),
     );
   }
 }
