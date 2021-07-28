@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 /// [StatefulWidget]を継承したウィジェット
 ///
@@ -31,12 +32,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   DateTime dt;
 
+  late DateFormat _format;
   late Timer _timer;
 
   _HomeScreenState(this.dt);
 
   @override
   void initState() {
+    _format = DateFormat("HH:mm:ss");
+
     // 1秒毎に着火するタイマーで setState を呼び出して UI を更新
     _timer = Timer.periodic(Duration(seconds: 1), (t) {
       setState(() {
@@ -60,25 +64,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            text(),
+            _format.format(dt),
             style: Theme.of(context).textTheme.headline2,
           ),
         ],
       )),
     );
-  }
-
-  String text() {
-    return '${dt.hour}:${padl2(dt.minute)}:${padl2(dt.second)}';
-  }
-
-  String padl2(int target) {
-    return target.toString().padLeft(2, '0');
   }
 }
