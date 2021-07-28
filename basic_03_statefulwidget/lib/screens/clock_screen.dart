@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
 /// 必要がある.このメソッドからは自身に対応する[State]オブジェクトを生成して返す.
 class ClockScreen extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
+  _ClockScreenState createState() {
     return _ClockScreenState(DateTime.now());
   }
 }
