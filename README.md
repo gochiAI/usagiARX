@@ -6,6 +6,6 @@ This is my TUTORIAL project for flutter.
 # Run (Gitpod)
 
 ```sh
-$ cd app
+$ cd /path/to/examples
 $ flutter run -d web-server
 ```
