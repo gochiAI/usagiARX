@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'basic_05_InheritedWidget_and_ValueNotifier',
       theme: ThemeData.dark(),
-      home: Home(),
+      home: const Home(),
     );
   }
 }
@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BodyData(
-        child: Body(),
+        child: const Body(),
       ),
     );
   }
@@ -65,9 +65,9 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ValueListenableBuilder(
+          ValueListenableBuilder<String>(
             valueListenable: data.text,
-            builder: (context, String value, _) {
+            builder: (context, value, _) {
               return Text(
                 value,
                 style: Theme.of(context).textTheme.headline3,

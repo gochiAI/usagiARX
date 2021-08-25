@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'basic_04_inheritedwidget',
       theme: ThemeData.dark(),
-      home: Home(),
+      home: const Home(),
     );
   }
 }
@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
       body: BodyData(
         text: 'hello world',
         textStyle: Theme.of(context).textTheme.headline3!,
-        child: Body(),
+        child: const Body(),
       ),
     );
   }

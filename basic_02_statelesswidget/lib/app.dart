@@ -10,12 +10,16 @@ import 'package:flutter/material.dart';
 /// ### References
 ///   - https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html
 class App extends StatelessWidget {
+  const App({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Basic-02 StatelessWidget',
       theme: ThemeData.dark(),
-      home: Scaffold(
+      home: const Scaffold(
         body: Center(
           child: Text('Basic-02 StatelessWidget'),
         ),

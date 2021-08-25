@@ -23,7 +23,7 @@ void main() {
   runApp(MaterialApp(
     title: 'Flutter HelloWorld',
     theme: ThemeData.dark(),
-    home: Scaffold(
+    home: const Scaffold(
       body: Center(
         child: Text('Hello World'),
       ),

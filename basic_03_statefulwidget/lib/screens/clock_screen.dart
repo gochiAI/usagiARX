@@ -8,9 +8,13 @@ import 'package:intl/intl.dart';
 /// [StatefulWidget]を継承した場合[createState]メソッドをオーバーライドする
 /// 必要がある.このメソッドからは自身に対応する[State]オブジェクトを生成して返す.
 class ClockScreen extends StatefulWidget {
+  const ClockScreen({
+    Key? key,
+  }) : super(key: key);
+
   @override
   _ClockScreenState createState() {
-    return _ClockScreenState(DateTime.now());
+    return _ClockScreenState();
   }
 }
 
@@ -30,19 +34,17 @@ class ClockScreen extends StatefulWidget {
 /// この中でUI変更に関わる値を変更する.
 ///
 class _ClockScreenState extends State<ClockScreen> {
-  DateTime dt;
+  var dt = DateTime.now();
 
   late DateFormat _formatter;
   late Timer _timer;
-
-  _ClockScreenState(this.dt);
 
   @override
   void initState() {
     _formatter = DateFormat("HH:mm:ss");
 
     // 1秒毎に着火するタイマーで setState を呼び出して UI を更新
-    _timer = Timer.periodic(Duration(seconds: 1), (t) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (t) {
       setState(() {
         // このコールバックの処理が終わると build メソッドが呼び出される
         dt = DateTime.now();

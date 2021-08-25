@@ -20,12 +20,15 @@ void main() {
   // というイメージ。
   //
   // なので、最小構成は以下のようになる。
-  runApp(MaterialApp(
+  runApp(
+    MaterialApp(
       title: 'Basic-01 Minimum',
       theme: ThemeData.dark(),
-      home: Scaffold(
+      home: const Scaffold(
         body: Center(
           child: Text('Basic-01 Minimum'),
         ),
-      )));
+      ),
+    ),
+  );
 }

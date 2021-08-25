@@ -9,9 +9,9 @@ import 'package:basic_04_inheritedwidget/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('UI smoke test', (WidgetTester tester) async {
+  testWidgets('UI smoke test', (tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(const MyApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('hello world'), findsOneWidget);

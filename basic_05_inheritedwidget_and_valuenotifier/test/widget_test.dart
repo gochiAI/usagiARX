@@ -9,8 +9,8 @@ import 'package:basic_05_inheritedwidget_and_valuenotifier/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('UI smoke test', (WidgetTester tester) async {
-    await tester.pumpWidget(MyApp());
+  testWidgets('UI smoke test', (tester) async {
+    await tester.pumpWidget(const MyApp());
 
     expect(find.text('hello world'), findsOneWidget);
     expect(find.text('HELLO WORLD'), findsNothing);
