@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tryflutter/views/pages/examples/button_disabled/button_disabled_page.dart';
 import 'package:tryflutter/views/pages/examples/helloworld/helloworld_page.dart';
 import 'package:tryflutter/views/pages/examples/inheritedwidget/inherited_widget_page.dart';
 import 'package:tryflutter/views/pages/examples/statefulwidget/clock_page.dart';
@@ -10,7 +11,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 2,
+      crossAxisCount: 4,
       crossAxisSpacing: 10,
       mainAxisSpacing: 10,
       padding: const EdgeInsets.all(10),
@@ -19,6 +20,7 @@ class Body extends StatelessWidget {
         _btn(context, (_) => const StatelessWidgetPage(), 'Stateless Widget'),
         _btn(context, (_) => const ClockPage(), 'Stateful Widget'),
         _btn(context, (_) => const InheritedWidgetPage(), 'Inherited Widget'),
+        _btn(context, (_) => const ButtonDisabled(), 'Button Disabled'),
       ],
     );
   }
