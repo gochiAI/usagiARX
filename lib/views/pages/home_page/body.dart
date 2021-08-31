@@ -10,68 +10,33 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 4,
+      crossAxisCount: 2,
       crossAxisSpacing: 10,
       mainAxisSpacing: 10,
       padding: const EdgeInsets.all(10),
       children: [
-        _helloworld(context),
-        _statelessWidget(context),
-        _statefulWidget(context),
-        _inheritedWidget(context),
+        _btn(context, (_) => const HelloWorldPage(), 'Hello World'),
+        _btn(context, (_) => const StatelessWidgetPage(), 'Stateless Widget'),
+        _btn(context, (_) => const ClockPage(), 'Stateful Widget'),
+        _btn(context, (_) => const InheritedWidgetPage(), 'Inherited Widget'),
       ],
     );
   }
 
-  Widget _helloworld(BuildContext context) {
+  Widget _btn(
+    BuildContext context,
+    Widget Function(BuildContext) fn,
+    String caption,
+  ) {
     return ElevatedButton(
       onPressed: () {
         Navigator.of(context).push<void>(
           MaterialPageRoute<void>(
-            builder: (context) => const HelloWorldPage(),
+            builder: fn,
           ),
         );
       },
-      child: const Text('HELLO WORLD'),
-    );
-  }
-
-  Widget _statelessWidget(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push<void>(
-          MaterialPageRoute<void>(
-            builder: (context) => const StatelessWidgetPage(),
-          ),
-        );
-      },
-      child: const Text('Stateless Widget'),
-    );
-  }
-
-  Widget _statefulWidget(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push<void>(
-          MaterialPageRoute<void>(
-            builder: (context) => const ClockPage(),
-          ),
-        );
-      },
-      child: const Text('Stateful Widget'),
-    );
-  }
-
-  Widget _inheritedWidget(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push<void>(
-          MaterialPageRoute<void>(
-            builder: (context) => const InheritedWidgetPage(),
-          ),
-        );
-      },
-      child: const Text('Inherited Widget'),
+      child: Text(caption),
     );
   }
 }
