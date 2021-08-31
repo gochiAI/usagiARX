@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
         _btn(context, (_) => const StatelessWidgetPage(), 'Stateless Widget'),
         _btn(context, (_) => const ClockPage(), 'Stateful Widget'),
         _btn(context, (_) => const InheritedWidgetPage(), 'Inherited Widget'),
-        _btn(context, (_) => const ButtonDisabled(), 'Button Disabled'),
+        _btn(context, (_) => const ButtonDisabledPage(), 'Button Disabled'),
       ],
     );
   }

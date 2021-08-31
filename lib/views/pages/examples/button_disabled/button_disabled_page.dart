@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ButtonDisabled extends StatelessWidget {
-  const ButtonDisabled({Key? key}) : super(key: key);
+class ButtonDisabledPage extends StatelessWidget {
+  const ButtonDisabledPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,8 @@ class ButtonDisabled extends StatelessWidget {
               ),
             ),
             const ElevatedButton(
-              // onPressに null を設定するとボタンが無効化される
+              // onPressedに null を設定するとボタンが無効化される
+              // see: https://api.flutter.dev/flutter/material/ElevatedButton-class.html
               onPressed: null,
               child: Text('NOT PUSH'),
             ),
