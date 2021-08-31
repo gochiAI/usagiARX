@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tryflutter/views/pages/examples/helloworld/helloworld_page.dart';
+import 'package:tryflutter/views/pages/examples/inheritedwidget/inherited_widget_page.dart';
+import 'package:tryflutter/views/pages/examples/statefulwidget/clock_page.dart';
 import 'package:tryflutter/views/pages/examples/statelesswidget/stateless_widget_page.dart';
 
 class Body extends StatelessWidget {
@@ -15,6 +17,8 @@ class Body extends StatelessWidget {
       children: [
         _helloworld(context),
         _statelessWidget(context),
+        _statefulWidget(context),
+        _inheritedWidget(context),
       ],
     );
   }
@@ -42,6 +46,32 @@ class Body extends StatelessWidget {
         );
       },
       child: const Text('Stateless Widget'),
+    );
+  }
+
+  Widget _statefulWidget(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.of(context).push<void>(
+          MaterialPageRoute<void>(
+            builder: (context) => const ClockPage(),
+          ),
+        );
+      },
+      child: const Text('Stateful Widget'),
+    );
+  }
+
+  Widget _inheritedWidget(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.of(context).push<void>(
+          MaterialPageRoute<void>(
+            builder: (context) => const InheritedWidgetPage(),
+          ),
+        );
+      },
+      child: const Text('Inherited Widget'),
     );
   }
 }
