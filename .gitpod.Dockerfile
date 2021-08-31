@@ -1,4 +1,4 @@
-FROM gitpod/workspace-flutter
+FROM gitpod/workspace-flutter:latest
 
 USER gitpod
 
