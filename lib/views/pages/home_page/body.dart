@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tryflutter/views/pages/examples/button_disabled/button_disabled_page.dart';
+import 'package:tryflutter/views/pages/examples/future_builder/future_builder_page.dart';
 import 'package:tryflutter/views/pages/examples/helloworld/helloworld_page.dart';
 import 'package:tryflutter/views/pages/examples/inheritedwidget/inherited_widget_page.dart';
 import 'package:tryflutter/views/pages/examples/statefulwidget/clock_page.dart';
 import 'package:tryflutter/views/pages/examples/statelesswidget/stateless_widget_page.dart';
+import 'package:tryflutter/views/pages/examples/stream_builder/stream_builder_page.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -21,6 +23,8 @@ class Body extends StatelessWidget {
         _btn(context, (_) => const ClockPage(), 'Stateful Widget'),
         _btn(context, (_) => const InheritedWidgetPage(), 'Inherited Widget'),
         _btn(context, (_) => const ButtonDisabledPage(), 'Button Disabled'),
+        _btn(context, (_) => const FutureBuilderPage(), 'Future Builder'),
+        _btn(context, (_) => const StreamBuilderPage(), 'Stream Builder'),
       ],
     );
   }
