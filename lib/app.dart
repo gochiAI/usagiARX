@@ -7,6 +7,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //
+    // スマホ端末で表示した際に日本語が中華フォントで
+    // 表示されてしまう件は、以下のようにロケールを指定することで解決できる.
+    //
+    // REFERENCES:
+    //   - https://qiita.com/najeira/items/dbf5663d1ed845fb1f51
+    //
     const locale = Locale("ja", "JP");
 
     return const MaterialApp(
