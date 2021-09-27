@@ -3,6 +3,7 @@ import 'package:tryflutter/views/pages/examples/button_disabled/button_disabled_
 import 'package:tryflutter/views/pages/examples/future_builder/future_builder_page.dart';
 import 'package:tryflutter/views/pages/examples/helloworld/helloworld_page.dart';
 import 'package:tryflutter/views/pages/examples/inheritedwidget/inherited_widget_page.dart';
+import 'package:tryflutter/views/pages/examples/return_value_from_screen/return_value_from_screen.dart';
 import 'package:tryflutter/views/pages/examples/statefulwidget/clock_page.dart';
 import 'package:tryflutter/views/pages/examples/statelesswidget/stateless_widget_page.dart';
 import 'package:tryflutter/views/pages/examples/stream_builder/stream_builder_page.dart';
@@ -25,6 +26,8 @@ class Body extends StatelessWidget {
         _btn(context, (_) => const ButtonDisabledPage(), 'Button Disabled'),
         _btn(context, (_) => const FutureBuilderPage(), 'Future Builder'),
         _btn(context, (_) => const StreamBuilderPage(), 'Stream Builder'),
+        _btn(context, (_) => const ReturnValueFromScreen(),
+            'Return value from Screen'),
       ],
     );
   }

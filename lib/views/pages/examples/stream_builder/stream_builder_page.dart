@@ -19,6 +19,10 @@ class _StreamBuilderPageState extends State<StreamBuilderPage> {
     _controller = StreamController<int>();
     Future(() async {
       for (var v in Iterable<int>.generate(10)) {
+        if (_controller.isClosed) {
+          break;
+        }
+
         _controller.sink.add(v);
 
         await Future<void>.delayed(
