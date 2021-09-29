@@ -29,3 +29,24 @@ $ flutter run -d chrome
 ```sh
 $ flutter run -d web-server
 ```
+
+# VSCode
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "try-flutter (chrome)",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--device-id=chrome",
+                "--web-renderer=html"
+            ],
+            "flutterMode": "debug"
+        }
+    ]
+}
+```
