@@ -1,7 +1,8 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - command: flutter config --no-enable-android --no-enable-ios --enable-web ; flutter pub get
+  - init: flutter channel stable && flutter upgrade
+    command: flutter config --no-enable-android --no-enable-ios --enable-web ; flutter pub get
 vscode:
   extensions:
     - dart-code.dart-code
