@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tryflutter/views/pages/examples/button_disabled/button_disabled_page.dart';
 import 'package:tryflutter/views/pages/examples/center_and_column_vertical_space/example.dart';
+import 'package:tryflutter/views/pages/examples/center_and_row_horizontal_space/example.dart';
 import 'package:tryflutter/views/pages/examples/future_builder/future_builder_page.dart';
 import 'package:tryflutter/views/pages/examples/helloworld/helloworld_page.dart';
 import 'package:tryflutter/views/pages/examples/inheritedwidget/inherited_widget_page.dart';
@@ -31,6 +32,8 @@ class Body extends StatelessWidget {
             'Return value from Screen'),
         _btn(context, (_) => const CenterAndColumnVerticalSpace(),
             'Center and Column'),
+        _btn(context, (_) => const CenterAndRowHorizontalSpace(),
+            'Center and Row'),
       ],
     );
   }

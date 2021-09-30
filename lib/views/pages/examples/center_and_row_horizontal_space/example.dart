@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CenterAndColumnVerticalSpace extends StatefulWidget {
-  const CenterAndColumnVerticalSpace({Key? key}) : super(key: key);
+class CenterAndRowHorizontalSpace extends StatefulWidget {
+  const CenterAndRowHorizontalSpace({Key? key}) : super(key: key);
 
   @override
   _State createState() => _State();
 }
 
-class _State extends State<CenterAndColumnVerticalSpace> {
+class _State extends State<CenterAndRowHorizontalSpace> {
   var _axisSize = MainAxisSize.max;
 
   @override
@@ -21,12 +21,12 @@ class _State extends State<CenterAndColumnVerticalSpace> {
     }
 
     //
-    // そのまま Column ウィジェットを Center ウィジェットで包むと
-    // 画面の上部分に要素が表示される。これは、Column ウィジェットが
-    // デフォルトでは縦サイズ（Vertical space) を可能な限り確保するように
+    // そのまま Row ウィジェットを Center ウィジェットで包むと
+    // 画面の左部分に要素が表示される。これは、Row ウィジェットが
+    // デフォルトでは横サイズ（Horizontal space) を可能な限り確保するように
     // なっているため。
     //
-    // 縦サイズの確保については、mainAxixSize プロパティで設定することが可能で
+    // 横サイズの確保については、mainAxixSize プロパティで設定することが可能で
     // このプロパティにデフォルトの値は MainAxisSize.max となっている。
     //
     // なので、以下のように MainAxisSize.min を指定すると他のウィジェットと
@@ -38,13 +38,13 @@ class _State extends State<CenterAndColumnVerticalSpace> {
     //
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Center and Column widgets'),
+        title: const Text('Center and Row widget'),
         centerTitle: true,
       ),
       body: Center(
         child: Container(
           color: Colors.black,
-          child: Column(
+          child: Row(
             mainAxisSize: _axisSize,
             children: [
               fn(Colors.green),
