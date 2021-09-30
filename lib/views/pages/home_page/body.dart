@@ -6,6 +6,7 @@ import 'package:tryflutter/views/pages/examples/future_builder/future_builder_pa
 import 'package:tryflutter/views/pages/examples/helloworld/helloworld_page.dart';
 import 'package:tryflutter/views/pages/examples/inheritedwidget/inherited_widget_page.dart';
 import 'package:tryflutter/views/pages/examples/return_value_from_screen/return_value_from_screen.dart';
+import 'package:tryflutter/views/pages/examples/show_material_banner/example.dart';
 import 'package:tryflutter/views/pages/examples/statefulwidget/clock_page.dart';
 import 'package:tryflutter/views/pages/examples/statelesswidget/stateless_widget_page.dart';
 import 'package:tryflutter/views/pages/examples/stream_builder/stream_builder_page.dart';
@@ -21,19 +22,39 @@ class Body extends StatelessWidget {
       mainAxisSpacing: 10,
       padding: const EdgeInsets.all(10),
       children: [
-        _btn(context, (_) => const HelloWorldPage(), 'Hello World'),
-        _btn(context, (_) => const StatelessWidgetPage(), 'Stateless Widget'),
-        _btn(context, (_) => const ClockPage(), 'Stateful Widget'),
-        _btn(context, (_) => const InheritedWidgetPage(), 'Inherited Widget'),
-        _btn(context, (_) => const ButtonDisabledPage(), 'Button Disabled'),
-        _btn(context, (_) => const FutureBuilderPage(), 'Future Builder'),
-        _btn(context, (_) => const StreamBuilderPage(), 'Stream Builder'),
-        _btn(context, (_) => const ReturnValueFromScreen(),
-            'Return value from Screen'),
-        _btn(context, (_) => const CenterAndColumnVerticalSpace(),
-            'Center and Column'),
-        _btn(context, (_) => const CenterAndRowHorizontalSpace(),
-            'Center and Row'),
+        _btn(context, (_) {
+          return const HelloWorldPage();
+        }, 'Hello World'),
+        _btn(context, (_) {
+          return const StatelessWidgetPage();
+        }, 'Stateless Widget'),
+        _btn(context, (_) {
+          return const ClockPage();
+        }, 'Stateful Widget'),
+        _btn(context, (_) {
+          return const InheritedWidgetPage();
+        }, 'Inherited Widget'),
+        _btn(context, (_) {
+          return const ButtonDisabledPage();
+        }, 'Button Disabled'),
+        _btn(context, (_) {
+          return const FutureBuilderPage();
+        }, 'Future Builder'),
+        _btn(context, (_) {
+          return const StreamBuilderPage();
+        }, 'Stream Builder'),
+        _btn(context, (_) {
+          return const ReturnValueFromScreen();
+        }, 'Return value from Screen'),
+        _btn(context, (_) {
+          return const CenterAndColumnVerticalSpace();
+        }, 'Center and Column'),
+        _btn(context, (_) {
+          return const CenterAndRowHorizontalSpace();
+        }, 'Center and Row'),
+        _btn(context, (_) {
+          return const ShowMaterialBanner();
+        }, 'Show Material Banner'),
       ],
     );
   }
