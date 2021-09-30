@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:tryflutter/views/pages/examples/button_disabled/button_disabled_page.dart';
+import 'package:tryflutter/views/pages/examples/button_disabled/example.dart';
 import 'package:tryflutter/views/pages/examples/center_and_column_vertical_space/example.dart';
 import 'package:tryflutter/views/pages/examples/center_and_row_horizontal_space/example.dart';
-import 'package:tryflutter/views/pages/examples/future_builder/future_builder_page.dart';
-import 'package:tryflutter/views/pages/examples/helloworld/helloworld_page.dart';
-import 'package:tryflutter/views/pages/examples/inheritedwidget/inherited_widget_page.dart';
-import 'package:tryflutter/views/pages/examples/return_value_from_screen/return_value_from_screen.dart';
+import 'package:tryflutter/views/pages/examples/future_builder/example.dart';
+import 'package:tryflutter/views/pages/examples/helloworld/example.dart';
+import 'package:tryflutter/views/pages/examples/inheritedwidget/example.dart';
+import 'package:tryflutter/views/pages/examples/return_value_from_screen/example.dart';
 import 'package:tryflutter/views/pages/examples/show_material_banner/example.dart';
-import 'package:tryflutter/views/pages/examples/statefulwidget/clock_page.dart';
-import 'package:tryflutter/views/pages/examples/statelesswidget/stateless_widget_page.dart';
-import 'package:tryflutter/views/pages/examples/stream_builder/stream_builder_page.dart';
+import 'package:tryflutter/views/pages/examples/statefulwidget/example.dart';
+import 'package:tryflutter/views/pages/examples/statelesswidget/example.dart';
+import 'package:tryflutter/views/pages/examples/stream_builder/example.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
