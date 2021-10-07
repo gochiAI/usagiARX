@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tryflutter/views/pages/examples/button_disabled/example.dart';
+import 'package:tryflutter/views/pages/examples/buttons/example.dart';
 import 'package:tryflutter/views/pages/examples/center_and_column_vertical_space/example.dart';
 import 'package:tryflutter/views/pages/examples/center_and_row_horizontal_space/example.dart';
 import 'package:tryflutter/views/pages/examples/future_builder/example.dart';
@@ -55,6 +56,9 @@ class Body extends StatelessWidget {
         _btn(context, (_) {
           return const ShowMaterialBanner();
         }, 'Show Material Banner'),
+        _btn(context, (_) {
+          return const Buttons();
+        }, 'Buttons'),
       ],
     );
   }
