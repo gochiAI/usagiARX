@@ -3,6 +3,7 @@ import 'package:tryflutter/views/pages/examples/button_disabled/example.dart';
 import 'package:tryflutter/views/pages/examples/buttons/example.dart';
 import 'package:tryflutter/views/pages/examples/center_and_column_vertical_space/example.dart';
 import 'package:tryflutter/views/pages/examples/center_and_row_horizontal_space/example.dart';
+import 'package:tryflutter/views/pages/examples/full_screen_loading/example.dart';
 import 'package:tryflutter/views/pages/examples/future_builder/example.dart';
 import 'package:tryflutter/views/pages/examples/helloworld/example.dart';
 import 'package:tryflutter/views/pages/examples/inheritedwidget/example.dart';
@@ -59,6 +60,9 @@ class Body extends StatelessWidget {
         _btn(context, (_) {
           return const Buttons();
         }, 'Buttons'),
+        _btn(context, (_) {
+          return const FullScreenLoading();
+        }, 'Full Screen Loading'),
       ],
     );
   }
