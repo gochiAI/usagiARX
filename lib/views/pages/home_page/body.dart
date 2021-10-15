@@ -12,6 +12,7 @@ import 'package:tryflutter/views/pages/examples/show_material_banner/example.dar
 import 'package:tryflutter/views/pages/examples/statefulwidget/example.dart';
 import 'package:tryflutter/views/pages/examples/statelesswidget/example.dart';
 import 'package:tryflutter/views/pages/examples/stream_builder/example.dart';
+import 'package:tryflutter/views/pages/examples/widget_visibility/example.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -63,6 +64,9 @@ class Body extends StatelessWidget {
         _btn(context, (_) {
           return const FullScreenLoading();
         }, 'Full Screen Loading'),
+        _btn(context, (_) {
+          return const WidgetVisibility();
+        }, 'Widget Visibility'),
       ],
     );
   }
