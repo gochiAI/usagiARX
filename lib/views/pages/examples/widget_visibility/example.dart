@@ -13,6 +13,8 @@ class _State extends State<WidgetVisibility> {
 
   @override
   Widget build(BuildContext context) {
+    // https://api.flutter.dev/flutter/widgets/Visibility/Visibility.html
+    // https://zenn.dev/junki555/articles/038ed853bd72757e7ac2
     return Scaffold(
       appBar: AppBar(
         title: const Text('Widget Visibility'),
