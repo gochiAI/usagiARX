@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:tryflutter/views/pages/home_page/home_page.dart';
+import 'package:get/get.dart';
+import 'package:tryflutter/views/pages/home/home.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
     //
     const locale = Locale("ja", "JP");
 
-    return const MaterialApp(
+    return const GetMaterialApp(
       locale: locale,
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
@@ -27,7 +28,7 @@ class App extends StatelessWidget {
         locale,
       ],
       title: 'try-flutter',
-      home: HomePage(),
+      home: Home(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tryflutter/views/pages/examples/button_disabled/example.dart';
 import 'package:tryflutter/views/pages/examples/buttons/example.dart';
 import 'package:tryflutter/views/pages/examples/center_and_column_vertical_space/example.dart';
@@ -26,49 +27,49 @@ class Body extends StatelessWidget {
       mainAxisSpacing: 10,
       padding: const EdgeInsets.all(10),
       children: [
-        _btn(context, (_) {
+        _btn(() {
           return const HelloWorldPage();
         }, 'Hello World'),
-        _btn(context, (_) {
+        _btn(() {
           return const StatelessWidgetPage();
         }, 'Stateless Widget'),
-        _btn(context, (_) {
+        _btn(() {
           return const ClockPage();
         }, 'Stateful Widget'),
-        _btn(context, (_) {
+        _btn(() {
           return const InheritedWidgetPage();
         }, 'Inherited Widget'),
-        _btn(context, (_) {
+        _btn(() {
           return const ButtonDisabledPage();
         }, 'Button Disabled'),
-        _btn(context, (_) {
+        _btn(() {
           return const FutureBuilderPage();
         }, 'Future Builder'),
-        _btn(context, (_) {
+        _btn(() {
           return const StreamBuilderPage();
         }, 'Stream Builder'),
-        _btn(context, (_) {
+        _btn(() {
           return const ReturnValueFromScreen();
         }, 'Return value from Screen'),
-        _btn(context, (_) {
+        _btn(() {
           return const CenterAndColumnVerticalSpace();
         }, 'Center and Column'),
-        _btn(context, (_) {
+        _btn(() {
           return const CenterAndRowHorizontalSpace();
         }, 'Center and Row'),
-        _btn(context, (_) {
+        _btn(() {
           return const ShowMaterialBanner();
         }, 'Show Material Banner'),
-        _btn(context, (_) {
+        _btn(() {
           return const Buttons();
         }, 'Buttons'),
-        _btn(context, (_) {
+        _btn(() {
           return const FullScreenLoading();
         }, 'Full Screen Loading'),
-        _btn(context, (_) {
+        _btn(() {
           return const WidgetVisibility();
         }, 'Widget Visibility'),
-        _btn(context, (_) {
+        _btn(() {
           return const WidgetOpacity();
         }, 'Widget Opacity'),
       ],
@@ -76,18 +77,11 @@ class Body extends StatelessWidget {
   }
 
   Widget _btn(
-    BuildContext context,
-    Widget Function(BuildContext) fn,
+    Widget Function() fn,
     String caption,
   ) {
     return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push<void>(
-          MaterialPageRoute<void>(
-            builder: fn,
-          ),
-        );
-      },
+      onPressed: () => Get.to<Widget>(fn()),
       child: Text(caption),
     );
   }
