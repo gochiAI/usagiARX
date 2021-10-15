@@ -12,7 +12,7 @@ class _VisibleController extends GetxController {
   void toggle() => _visible.value = !_visible.value;
 }
 
-/// Visibility ウィジェットのサンプルです.
+/// [Visibility] ウィジェットのサンプルです.
 ///
 /// ### REFERENCES
 /// - https://api.flutter.dev/flutter/widgets/Visibility/Visibility.html
