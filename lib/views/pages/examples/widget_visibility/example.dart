@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class WidgetVisibility extends StatefulWidget {
+/// 表示/非表示を管理するコントローラーです.
+///
+/// ### REFERENCES
+/// - https://pub.dev/packages/get
+class _VisibleController extends GetxController {
+  final _visible = true.obs;
+
+  bool get visible => _visible.value;
+  void toggle() => _visible.value = !_visible.value;
+}
+
+/// Visibility ウィジェットのサンプルです.
+///
+/// ### REFERENCES
+/// - https://api.flutter.dev/flutter/widgets/Visibility/Visibility.html
+/// - https://zenn.dev/junki555/articles/038ed853bd72757e7ac2
+/// - https://pub.dev/packages/get
+class WidgetVisibility extends StatelessWidget {
   const WidgetVisibility({Key? key}) : super(key: key);
 
   @override
-  _State createState() => _State();
-}
-
-class _State extends State<WidgetVisibility> {
-  var _btn1Visible = true;
-  var _btn2Visible = true;
-
-  @override
   Widget build(BuildContext context) {
-    // https://api.flutter.dev/flutter/widgets/Visibility/Visibility.html
-    // https://zenn.dev/junki555/articles/038ed853bd72757e7ac2
+    final c1 = Get.put(_VisibleController(), tag: 'btn1');
+    final c2 = Get.put(_VisibleController(), tag: 'btn2');
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Widget Visibility'),
@@ -24,27 +35,31 @@ class _State extends State<WidgetVisibility> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Visibility(
-              visible: _btn1Visible,
-              maintainAnimation: true,
-              maintainState: true,
-              maintainSize: true,
-              child: ElevatedButton(
-                onPressed: () => setState(() => _btn2Visible = !_btn2Visible),
-                child: Text(_btn2Visible ? '下のボタンを消す' : '下のボタンを表示'),
+            Obx(
+              () => Visibility(
+                visible: c1.visible,
+                maintainAnimation: true,
+                maintainState: true,
+                maintainSize: true, // 非表示でも元のサイズを保つ
+                child: ElevatedButton(
+                  onPressed: c2.toggle,
+                  child: Text(c2.visible ? '下のボタンを消す' : '下のボタンを表示'),
+                ),
               ),
             ),
             const SizedBox(
               height: 10.0,
             ),
-            Visibility(
-              visible: _btn2Visible,
-              maintainAnimation: true,
-              maintainState: true,
-              maintainSize: false,
-              child: ElevatedButton(
-                onPressed: () => setState(() => _btn1Visible = !_btn1Visible),
-                child: Text(_btn1Visible ? '上のボタンを消す' : '上のボタンを表示'),
+            Obx(
+              () => Visibility(
+                visible: c2.visible,
+                maintainAnimation: true,
+                maintainState: true,
+                maintainSize: false, // 非表示になると元のサイズは保たない
+                child: ElevatedButton(
+                  onPressed: c1.toggle,
+                  child: Text(c1.visible ? '上のボタンを消す' : '上のボタンを表示'),
+                ),
               ),
             ),
           ],
