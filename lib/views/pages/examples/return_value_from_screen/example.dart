@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// 遷移先の画面から結果値を取得するサンプルです. ([WillPopScope])
+///
+/// ### REFERENCES
+/// - https://tech-rise.net/return-data-on-click-back-button/
+/// - https://qiita.com/canisterism/items/994f954df216d6b5a93b
 class ReturnValueFromScreen extends StatefulWidget {
   const ReturnValueFromScreen({Key? key}) : super(key: key);
 

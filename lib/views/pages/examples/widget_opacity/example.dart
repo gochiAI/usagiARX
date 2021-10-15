@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-/// Opacity の値を操作するコントローラーです.
+/// `Opacity` の値を操作するコントローラーです.
 class _OpacityController extends GetxController {
   final _opacity = 1.0.obs;
 

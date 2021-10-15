@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// [InheritedWidget]についてのサンプルです.
 class InheritedWidgetPage extends StatelessWidget {
   const InheritedWidgetPage({Key? key}) : super(key: key);
 

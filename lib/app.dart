@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:tryflutter/views/pages/home/home.dart';
 
+/// アプリケーションを表します.
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 

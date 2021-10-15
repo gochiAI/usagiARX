@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// フルスクリーンでローディングを表示するサンプルです.
+///
+/// ### REFERENCES
+/// - https://qiita.com/bon_ninax/items/331eabfdd2cab9efca96
+/// - https://api.flutter.dev/flutter/widgets/showGeneralDialog.html
 class FullScreenLoading extends StatefulWidget {
   const FullScreenLoading({Key? key}) : super(key: key);
 
@@ -13,8 +18,6 @@ class _State extends State<FullScreenLoading> {
 
   @override
   Widget build(BuildContext context) {
-    // https://qiita.com/bon_ninax/items/331eabfdd2cab9efca96
-    // https://api.flutter.dev/flutter/widgets/showGeneralDialog.html
     return Scaffold(
       appBar: AppBar(
         title: const Text('Full Screen Loading'),

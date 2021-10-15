@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+/// [ScaffoldMessenger]の `showMaterialBanner` についてのサンプルです.
+///
+/// ### REFERENCES
+/// - https://medium.com/flutter/whats-new-in-flutter-2-5-6f080c3f3dc
 class ShowMaterialBanner extends StatefulWidget {
   const ShowMaterialBanner({Key? key}) : super(key: key);
 

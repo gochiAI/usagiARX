@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+/// Flutter に 用意されている各ボタンのサンプルです.
+///
+/// ### REFERENCES
+/// - https://medium.com/flutterdevs/flutter-2-0-button-cheat-sheet-93217b3c908a
 class Buttons extends StatelessWidget {
   const Buttons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    //https://medium.com/flutterdevs/flutter-2-0-button-cheat-sheet-93217b3c908a
     return Scaffold(
       appBar: AppBar(
         title: const Text('Buttons'),

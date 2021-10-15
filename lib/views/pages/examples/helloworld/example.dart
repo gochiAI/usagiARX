@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// HelloWorldサンプルです.
 class HelloWorldPage extends StatelessWidget {
   const HelloWorldPage({Key? key}) : super(key: key);
 

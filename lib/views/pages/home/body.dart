@@ -16,6 +16,7 @@ import 'package:tryflutter/views/pages/examples/stream_builder/example.dart';
 import 'package:tryflutter/views/pages/examples/widget_opacity/example.dart';
 import 'package:tryflutter/views/pages/examples/widget_visibility/example.dart';
 
+/// [Home] の body 部分を表します.
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
 

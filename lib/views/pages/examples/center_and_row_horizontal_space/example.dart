@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// [Center]ウィジェットと[Row]ウィジェットのサンプルです.
+///
+/// ### REFERENCES
+/// - https://stackoverflow.com/questions/41845693/how-can-i-tightly-wrap-a-column-of-widgets-inside-a-card
+/// - https://qiita.com/sekitaka_1214/items/03255fd9f61685503af3
 class CenterAndRowHorizontalSpace extends StatefulWidget {
   const CenterAndRowHorizontalSpace({Key? key}) : super(key: key);
 

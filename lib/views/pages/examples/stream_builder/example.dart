@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+/// [StreamBuilder]についてのサンプルです.
 class StreamBuilderPage extends StatefulWidget {
   const StreamBuilderPage({Key? key}) : super(key: key);
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// [FutureBuilder]のサンプルです.
 class FutureBuilderPage extends StatefulWidget {
   const FutureBuilderPage({Key? key}) : super(key: key);
 

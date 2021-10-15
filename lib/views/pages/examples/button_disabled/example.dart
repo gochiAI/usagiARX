@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+/// ボタンを非活性にするサンプルです.
+///
+/// ### REFERENCES
+/// - https://api.flutter.dev/flutter/material/ElevatedButton-class.html
 class ButtonDisabledPage extends StatelessWidget {
   const ButtonDisabledPage({Key? key}) : super(key: key);
 
@@ -23,7 +27,6 @@ class ButtonDisabledPage extends StatelessWidget {
             ),
             const ElevatedButton(
               // onPressedに null を設定するとボタンが無効化される
-              // see: https://api.flutter.dev/flutter/material/ElevatedButton-class.html
               onPressed: null,
               child: Text('NOT PUSH'),
             ),
