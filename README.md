@@ -17,17 +17,18 @@ This is my TUTORIAL project for flutter.
 - https://qiita.com/tags/flutter
 - https://zenn.dev/topics/flutter
 - https://stackoverflow.com/questions/tagged/flutter?sort=MostVotes&edited=true
+- https://pub.dev/packages/get
 
 # Run (Chrome)
 
 ```sh
-$ flutter run -d chrome
+$ flutter run -d chrome --web-renderer html
 ```
 
 # Run (Gitpod)
 
 ```sh
-$ flutter run -d web-server
+$ flutter run -d web-server --web-renderer html
 ```
 
 # VSCode
