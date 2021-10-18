@@ -8,6 +8,7 @@ import 'package:tryflutter/views/pages/examples/full_screen_loading/example.dart
 import 'package:tryflutter/views/pages/examples/future_builder/example.dart';
 import 'package:tryflutter/views/pages/examples/helloworld/example.dart';
 import 'package:tryflutter/views/pages/examples/inheritedwidget/example.dart';
+import 'package:tryflutter/views/pages/examples/layouts/wrap/example.dart';
 import 'package:tryflutter/views/pages/examples/return_value_from_screen/example.dart';
 import 'package:tryflutter/views/pages/examples/show_material_banner/example.dart';
 import 'package:tryflutter/views/pages/examples/statefulwidget/example.dart';
@@ -73,6 +74,9 @@ class Body extends StatelessWidget {
         _btn(() {
           return const WidgetOpacity();
         }, 'Widget Opacity'),
+        _btn(() {
+          return const WrapWidget();
+        }, '[Layouts] Wrap'),
       ],
     );
   }
@@ -82,7 +86,7 @@ class Body extends StatelessWidget {
     String caption,
   ) {
     return ElevatedButton(
-      onPressed: () => Get.to<Widget>(fn()),
+      onPressed: () => Get.to<Widget>(() => fn()),
       child: Text(caption),
     );
   }
