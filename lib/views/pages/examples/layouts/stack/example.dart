@@ -51,8 +51,9 @@ class StackWidget extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: ElevatedButton(
-                        child: const Text('toggle StackFit'),
-                        onPressed: c.toggle),
+                      child: const Text('toggle StackFit'),
+                      onPressed: c.toggle,
+                    ),
                   ),
                 ),
                 SizedBox(
