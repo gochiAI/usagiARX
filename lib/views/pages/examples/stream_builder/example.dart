@@ -7,41 +7,16 @@ class StreamBuilderPage extends StatefulWidget {
   const StreamBuilderPage({Key? key}) : super(key: key);
 
   @override
-  _StreamBuilderPageState createState() => _StreamBuilderPageState();
+  _State createState() => _State();
 }
 
-class _StreamBuilderPageState extends State<StreamBuilderPage> {
-  late StreamController<int> _controller;
+class _State extends State<StreamBuilderPage> {
+  late Stream<int> _stream;
 
   @override
   void initState() {
     super.initState();
-
-    _controller = StreamController<int>();
-    Future(() async {
-      for (var v in Iterable<int>.generate(10)) {
-        if (_controller.isClosed) {
-          break;
-        }
-
-        _controller.sink.add(v);
-
-        await Future<void>.delayed(
-          const Duration(seconds: 1),
-        );
-      }
-
-      _controller.close();
-    });
-  }
-
-  @override
-  void dispose() {
-    if (!_controller.isClosed) {
-      _controller.close();
-    }
-
-    super.dispose();
+    _stream = Stream.periodic(const Duration(seconds: 1), (v) => v).take(10);
   }
 
   @override
@@ -53,7 +28,7 @@ class _StreamBuilderPageState extends State<StreamBuilderPage> {
       ),
       body: Center(
         child: StreamBuilder<int>(
-          stream: _controller.stream,
+          stream: _stream,
           builder: (context, snapshot) {
             switch (snapshot.connectionState) {
               case ConnectionState.waiting:
