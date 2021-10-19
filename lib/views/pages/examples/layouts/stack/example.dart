@@ -40,6 +40,7 @@ class StackWidget extends StatelessWidget {
                   color: Colors.yellow,
                 ),
                 Container(
+                  margin: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 30.0),
                   width: maxW / 2,
                   height: maxH / 2,
                   color: Colors.red,
@@ -52,6 +53,14 @@ class StackWidget extends StatelessWidget {
                     child: ElevatedButton(
                         child: const Text('toggle StackFit'),
                         onPressed: c.toggle),
+                  ),
+                ),
+                SizedBox(
+                  width: maxW,
+                  height: maxH,
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text(c.isExpand ? 'expand' : 'loose'),
                   ),
                 ),
               ],
