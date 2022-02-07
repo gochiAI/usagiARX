@@ -31,6 +31,13 @@ $ flutter run -d chrome --web-renderer html
 $ flutter run -d web-server --web-renderer html
 ```
 
+# Run (Windows)
+
+```sh
+$ flutter config --enable-windows-desktop true
+$ flutter run -d windows
+```
+
 # VSCode
 
 ```json
@@ -44,6 +51,27 @@ $ flutter run -d web-server --web-renderer html
             "type": "dart",
             "args": [
                 "--device-id=chrome",
+                "--web-renderer=html"
+            ],
+            "flutterMode": "debug"
+        },
+        {
+            "name": "try-flutter (windows)",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--device-id=windows"
+            ],
+            "flutterMode": "debug"
+        },
+        {
+            "name": "try-flutter (web-server)",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--device-id=web-server",
                 "--web-renderer=html"
             ],
             "flutterMode": "debug"
