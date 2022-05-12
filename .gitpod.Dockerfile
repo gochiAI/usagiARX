@@ -1,3 +1,3 @@
-FROM gitpod/workspace-base:latest
+FROM gitpod/workspace-go:latest
 
 USER gitpod
