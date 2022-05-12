@@ -22,13 +22,13 @@ This is my TUTORIAL project for flutter.
 # Run (Chrome)
 
 ```sh
-$ flutter run -d chrome --web-renderer html
+$ flutter run -d chrome
 ```
 
 # Run (Gitpod)
 
 ```sh
-$ flutter run -d web-server --web-renderer html
+$ flutter run -d web-server
 ```
 
 # Run (Windows)
@@ -50,8 +50,7 @@ $ flutter run -d windows
             "request": "launch",
             "type": "dart",
             "args": [
-                "--device-id=chrome",
-                "--web-renderer=html"
+                "--device-id=chrome"
             ],
             "flutterMode": "debug"
         },
@@ -71,8 +70,7 @@ $ flutter run -d windows
             "request": "launch",
             "type": "dart",
             "args": [
-                "--device-id=web-server",
-                "--web-renderer=html"
+                "--device-id=web-server"
             ],
             "flutterMode": "debug"
         }
