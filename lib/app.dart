@@ -18,18 +18,21 @@ class App extends StatelessWidget {
     //
     const locale = Locale("ja", "JP");
 
-    return const GetMaterialApp(
+    return GetMaterialApp(
       locale: locale,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
+      supportedLocales: const [
         locale,
       ],
+      theme: ThemeData(
+        fontFamily: 'NotoSansJP',
+      ),
       title: 'try-flutter',
-      home: Home(),
+      home: const Home(),
     );
   }
 }
