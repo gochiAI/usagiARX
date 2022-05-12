@@ -1,7 +1,7 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: git clone https://github.com/flutter/flutter.git -b stable; sudo ln -s /workspace/try-flutter/flutter/bin/flutter /usr/bin/flutter ; flutter upgrade
+  - name: flutter config
     command: flutter config --no-enable-android --no-enable-ios --no-enable-windows-desktop --enable-web ; flutter pub get
 vscode:
   extensions:
