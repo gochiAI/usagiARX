@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: config
-    command: flutter config --no-enable-android --no-enable-ios --no-enable-windows-desktop --enable-web
+    command: flutter config --no-enable-android --no-enable-ios --no-enable-windows-desktop --no-enable-linux-desktop --no-enable-macos-desktop --enable-web
   - name: pub get
     command: flutter pub get
 vscode:
