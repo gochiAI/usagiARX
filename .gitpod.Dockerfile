@@ -1,12 +1,12 @@
-FROM gitpod/workspace-full-vnc:2022-06-20-19-54-55
+FROM gitpod/workspace-full-vnc:2022-09-03-08-31-56
 SHELL ["/bin/bash", "-c"]
 ENV ANDROID_HOME=$HOME/androidsdk \
-    FLUTTER_VERSION=3.0.4-stable \
+    FLUTTER_VERSION=3.3.0-stable \
     QTWEBENGINE_DISABLE_SANDBOX=1
 ENV PATH="$HOME/flutter/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
 
 # https://github.com/gitpod-io/workspace-images/issues/872#issuecomment-1178697219
-RUN sudo rm /etc/apt/sources.list.d/ungoogled_chromium.list
+RUN sudo rm -f /etc/apt/sources.list.d/ungoogled_chromium.list
 
 # Install Open JDK for android and other dependencies
 USER root
