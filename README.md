@@ -8,7 +8,7 @@ This project is intended to run on gitpod.
 
 ```sh
 gitpod /workspace/try-flutter (main) $ flutter --version
-lutter 3.3.0 • channel stable • https://github.com/flutter/flutter.git
+Flutter 3.3.0 • channel stable • https://github.com/flutter/flutter.git
 Framework • revision ffccd96b62 (6 days ago) • 2022-08-29 17:28:57 -0700
 Engine • revision 5e9e0e0aa8
 Tools • Dart 2.18.0 • DevTools 2.15.0
@@ -53,4 +53,4 @@ Debugging and Hot Reload features can be done normally. Thanks Gitpod!! :)
 
 - [gitpod-io/template-flutter](https://github.com/gitpod-io/template-flutter)
   - The gitpod.yml and gitpod.Dockerfile are copied from this repository.
-  - If used as is, apt-get will generate an error and the pre-build will not succeed, so I adjusted the Dockerfile based on the contents of https://github.com/gitpod-io/workspace-images/issues/872.
+  - ~~If used as is, apt-get will generate an error and the pre-build will not succeed, so I adjusted the Dockerfile based on the contents of https://github.com/gitpod-io/workspace-images/issues/872.~~
