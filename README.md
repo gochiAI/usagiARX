@@ -8,10 +8,10 @@ This project is intended to run on gitpod.
 
 ```sh
 gitpod /workspace/try-flutter (main) $ flutter --version
-Flutter 3.0.4 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision 85684f9300 (11 days ago) • 2022-06-30 13:22:47 -0700
-Engine • revision 6ba2af10bb
-Tools • Dart 2.17.5 • DevTools 2.12.2
+lutter 3.3.0 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision ffccd96b62 (6 days ago) • 2022-08-29 17:28:57 -0700
+Engine • revision 5e9e0e0aa8
+Tools • Dart 2.18.0 • DevTools 2.15.0
 ```
 
 ## flutter doctor
@@ -19,7 +19,7 @@ Tools • Dart 2.17.5 • DevTools 2.12.2
 ```sh
 gitpod /workspace/try-flutter (main) $ flutter doctor
 Doctor summary (to see all details, run flutter doctor -v):
-[✓] Flutter (Channel stable, 3.0.4, on Ubuntu 20.04.4 LTS 5.15.0-40-generic, locale en_US.UTF-8)
+[✓] Flutter (Channel stable, 3.3.0, on Ubuntu 20.04.5 LTS 5.15.0-46-generic, locale en_US.UTF-8)
 [✓] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
 [✓] Chrome - develop for the web
 [✓] Linux toolchain - develop for Linux desktop
@@ -35,8 +35,8 @@ Doctor summary (to see all details, run flutter doctor -v):
 ```sh
 gitpod /workspace/try-flutter (main) $ flutter run
 Multiple devices found:
-Linux (desktop) • linux  • linux-x64      • Ubuntu 20.04.4 LTS 5.15.0-40-generic
-Chrome (web)    • chrome • web-javascript • Chromium 95.0.4638.54 Ubuntu
+Linux (desktop) • linux  • linux-x64      • Ubuntu 20.04.5 LTS 5.15.0-46-generic
+Chrome (web)    • chrome • web-javascript • Google Chrome 105.0.5195.102
 [1]: Linux (linux)
 [2]: Chrome (chrome)
 Please choose one (To quit, press "q/Q"): [Your choice]
